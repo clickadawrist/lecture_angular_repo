@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-demo';
+  myFavoriteThings = [{
+    name: "ice cream",
+    price: "expensive"
+  },
+  {
+    name: "pizza",
+    price: "cheap"
+  }]
+
+  selectedThing = {};
+
+  clickedFavoriteThing(thing){
+    this.selectedThing = thing;
+  }
+
+  scream(whatToScream){
+    alert(whatToScream)
+  }
+
 }
